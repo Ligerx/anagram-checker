@@ -1,3 +1,5 @@
-# anagram-checker
+# Anagram Checker
 
-Simple web page to check if two strings are anagrams.
+A simple web page that checks if two strings are anagrams.
+
+Built with HTML, CSS, JS and a dash of JQuery.
