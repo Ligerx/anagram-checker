@@ -1,11 +1,16 @@
 $("document").ready(function() {
+  // Get the text box inputs
   var input1 = $("#one");
   var input2 = $("#two");
 
+  // When the form is submitted, prevent the default submission,
+  // check if the inputs are anagrams, and update the DOM
   $('form').on('submit', function(e) {
     e.preventDefault();
 
     console.log(isAnagram(input1.val(), input2.val()));
+
+    // TODO update the DOM
   });
 });
 
