@@ -3,14 +3,27 @@ $("document").ready(function() {
   var input1 = $("#one");
   var input2 = $("#two");
 
+  // Get the text element that will display the result
+  var output = $("#output");
+
   // When the form is submitted, prevent the default submission,
   // check if the inputs are anagrams, and update the DOM
   $('form').on('submit', function(e) {
     e.preventDefault();
 
-    console.log(isAnagram(input1.val(), input2.val()));
+    var text1 = input1.val();
+    var text2 = input2.val();
+    var anagram = isAnagram(text1, text2);
 
-    // TODO update the DOM
+    if(text1 === '' && text2 === '') {
+      return; // Don't change anything when no text has been entered
+    }
+    else if(anagram) {
+      output.text("Yup, that's an anagram alright");
+    }
+    else {
+      output.text("Nope, that ain't an anagram");
+    }
   });
 });
 
@@ -22,8 +35,9 @@ function isAnagram(rawString1, rawString2) {
 }
 
 function processString(unsorted) {
-  // Note, function does not remove non-space characters
+  // Note: function does not remove non-space characters
   // This means that characters like punctuation and numbers are not removed
+  // A regex function could be added if it becomes a necessary requirement
 
   var processedString = unsorted
                         .toLowerCase() // Make upper case and lower case equivalent
