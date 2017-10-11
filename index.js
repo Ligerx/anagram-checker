@@ -7,9 +7,8 @@ $("document").ready(function() {
   var output = $("#output");
 
   // Get the text element to restate the strings entered
-  // This is so you know that your input is being evaluated correctly
+  // This way users have feedback that their input is correct
   var restateInput = $("#restate-input");
-
 
 
   // When the form is submitted, prevent the default submission,
@@ -22,7 +21,8 @@ $("document").ready(function() {
     var anagram = isAnagram(text1, text2);
 
     if(text1 === '' && text2 === '') {
-      return; // Don't change anything when no text has been entered
+      // Don't change anything when no text has been entered
+      return;
     }
     else {
       if(anagram) {
@@ -32,7 +32,7 @@ $("document").ready(function() {
         output.text("Nope, that ain't an anagram");
       }
 
-      // Reprint the inputted text to show user it's working
+      // Reprint the inputted text to give feedback to the user
       restateInput.text("[" + text1 + "] and [" + text2 + "]");
     }
   });
