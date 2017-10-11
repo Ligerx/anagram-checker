@@ -57,5 +57,5 @@ function processString(unsorted) {
                         .join('')
                         .trim();       // Ignore spaces between words and trailing spaces
 
-                        return processedString;
+  return processedString;
 }
