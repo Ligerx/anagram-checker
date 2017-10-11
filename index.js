@@ -6,6 +6,12 @@ $("document").ready(function() {
   // Get the text element that will display the result
   var output = $("#output");
 
+  // Get the text element to restate the strings entered
+  // This is so you know that your input is being evaluated correctly
+  var restateInput = $("#restate-input");
+
+
+
   // When the form is submitted, prevent the default submission,
   // check if the inputs are anagrams, and update the DOM
   $('form').on('submit', function(e) {
@@ -18,11 +24,16 @@ $("document").ready(function() {
     if(text1 === '' && text2 === '') {
       return; // Don't change anything when no text has been entered
     }
-    else if(anagram) {
-      output.text("Yup, that's an anagram alright");
-    }
     else {
-      output.text("Nope, that ain't an anagram");
+      if(anagram) {
+        output.text("Yup, that's an anagram alright");
+      }
+      else {
+        output.text("Nope, that ain't an anagram");
+      }
+
+      // Reprint the inputted text to show user it's working
+      restateInput.text("[" + text1 + "] and [" + text2 + "]");
     }
   });
 });
@@ -46,5 +57,5 @@ function processString(unsorted) {
                         .join('')
                         .trim();       // Ignore spaces between words and trailing spaces
 
-  return processedString;
-}
+                        return processedString;
+                      }

@@ -5,7 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anagram Checker</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0=" crossorigin="anonymous" />
   <link rel="stylesheet" href="index.css">
 </head>
 
@@ -18,14 +18,20 @@
         <h3>Magic Anagram Checker</h3>
       </div>
 
-      <div class="cell small-5">
+      <div class="cell small-3 medium-5">
         <div id="output-parent">
-          <h1 id="output"></h1>
+          <!-- <p id="restate-input"></p> -->
+          <!-- <h1 id="output"><small id="restate-input"></small></h1> -->
+          <h1>
+            <small><span id="restate-input"></span></small>
+            <br/>
+            <span id="output"></span>
+          </h1>
         </div>
       </div>
 
       <div class="cell auto">
-        <form>
+        <form autocomplete="off">
 
           <div class="grid-x align-center">
             <div class="small-12 medium-8 cell">
@@ -49,18 +55,17 @@
       </div>
 
       <div class="cell shrink">
-        <p>Second cell</p>
+        <p><a href="https://alexwang.io">Alex Wang</a> | <a href="https://github.com/Ligerx/anagram-checker">GitHub Repo</a></p>
       </div>
 
     </div>
   </div>
 
-
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
-  <script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js" integrity="sha256-mRYlCu5EG+ouD07WxLF8v4ZAZYCA6WrmdIXyn1Bv9Vk=" crossorigin="anonymous"></script> -->
+  <!-- <script>
     $(document).foundation();
-  </script>
+  </script> -->
   <script src="index.js"></script>
 
 </body>
