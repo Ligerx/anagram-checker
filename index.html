@@ -10,36 +10,46 @@
 </head>
 
 <body>
+
   <div class="grid-container">
+    <div class="grid-y grid-frame text-center">
 
-    <div class="grid-x grid-margin-x align-center">
-      <!-- <div class="small-12 medium-6 large-3 cell"> -->
-          <h1 id="output">The Anagram Checker!</h1>
-      <!-- </div> -->
+      <div class="cell small-5">
+        <h1>The Anagram Checker</h1>
+        <h2 id="output"></h2>
+      </div>
+
+      <div class="cell auto">
+        <form>
+
+          <div class="grid-x align-center">
+            <div class="small-12 medium-8 cell">
+            <input id="one" type="text" placeholder="Type your first phrase here...">
+            </div>
+          </div>
+
+          <div class="grid-x align-center">
+            <div class="small-12 medium-8 cell">
+              <input id="two" type="text" placeholder="And your second phrase here...">
+            </div>
+          </div>
+
+          <div class="grid-x align-center">
+            <div class="small-12 medium-4 cell">
+              <input type="submit" class="button expanded" value="Check Anagram">
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="cell shrink">
+        <p>Second cell</p>
+      </div>
+
     </div>
-
-    <form>
-      <div class="grid-x grid-margin-x align-center">
-        <div class="small-12 medium-6 cell">
-          <label>Input One
-            <input id="one" type="text" placeholder="Type here...">
-          </label>
-        </div>
-        <div class="small-12 medium-6 cell">
-          <label>Input Two
-            <input id="two" type="text" placeholder="Type here...">
-          </label>
-        </div>
-      </div>
-
-      <div class="grid-x grid-margin-x align-center">
-        <div class="small-12 medium-6 cell">
-          <input type="submit" class="button expanded" value="Check Anagram">
-        </div>
-      </div>
-    </form>
-
   </div>
+
 
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
