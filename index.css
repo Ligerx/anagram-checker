@@ -1,4 +1,12 @@
-/*#output {
-  margin-top: 20vh;
+#output {
+
 }
-*/
+
+/* Make the output header centered in its div. Just for fun. */
+#output-parent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
