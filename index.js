@@ -58,4 +58,4 @@ function processString(unsorted) {
                         .trim();       // Ignore spaces between words and trailing spaces
 
                         return processedString;
-                      }
+}
